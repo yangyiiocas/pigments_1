@@ -6,22 +6,6 @@ import random
 import pickle
 
 
-class ANN64(nn.Module):
-    def __init__(self, in_channels, inner_channels):
-        super(ANN64, self).__init__()
-        self.fn1 = nn.Linear(in_channels,inner_channels,bias=True)
-        self.fn2 = nn.Linear(inner_channels,inner_channels,bias=True)
-        # self.fn3 = nn.Linear(inner_channels,inner_channels,bias=True)
-        self.fn4 = nn.Linear(inner_channels,1,bias=True)
-        self.relu = nn.ReLU(inplace=True)
-
-    def forward(self, x):
-        x = self.relu(self.fn1(x))
-        x = self.relu(self.fn2(x))
-        # x = self.relu(self.fn3(x))
-        x = self.fn4(x)
-
-        return x
 
 class Group(nn.Module):
     def __init__(self, in_channels,inner_channels,out_channels,above_channels):
