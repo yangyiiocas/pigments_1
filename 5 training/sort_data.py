@@ -94,7 +94,7 @@ def sort_train_test(pigments, pigments_use, x_dict, lat, lon, case1, save_sub_pa
         y = pigment[:,np.newaxis]
         
 
-        print(var,sum(use),x.shape,y.shape)
+        print(var,'sorted.')
 
         # save data 
         # 保存为以色素为文件名的输入x,输出y,xy的原始值(包括不进行输入时的lon chla),以及case1water.
